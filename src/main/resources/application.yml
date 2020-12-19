@@ -1,0 +1,22 @@
+server:
+  servlet:
+    context-path: /referencingSystem
+
+
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/pages/
+      suffix: .jsp
+  datasource:
+    url: jdbc:mysql://localhost:3306/referencing_system?useUnicode=true&serverTimezone=UTC
+    username: root
+    password: 12345
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    jdbc.lob.non_contextual_creation: true
+
